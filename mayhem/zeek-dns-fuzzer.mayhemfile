@@ -1,0 +1,4 @@
+project: PROJECT
+target: zeek-dns-fuzzer
+cmds:
+- cmd: /out/zeek-dns-fuzzer
