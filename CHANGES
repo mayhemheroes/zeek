@@ -1,3 +1,34 @@
+5.0.0-dev.575 | 2022-06-03 10:55:47 -0700
+
+  * Management framework: bump external cluster testsuite (Christian Kreibich, Corelight)
+
+  * Management framework: bump zeek-client to bring back to master (Christian Kreibich, Corelight)
+
+5.0.0-dev.572 | 2022-06-03 10:31:51 -0700
+
+  * Fix hang in DNS analyzer with malformed packet (Tim Wojtulewicz, Corelight)
+
+    (cherry picked from commit dfc9f77b68f6d02d059ade322b9c132e32c26872)
+
+5.0.0-dev.571 | 2022-06-03 09:50:45 -0700
+
+  * Additional &is_used tags in the Netcontrol and Sumstats frameworks (Christian Kreibich, Corelight)
+
+    When running a cluster, these functions only get called in select node types and
+    could trigger no-caller warnings on stderr.
+
+5.0.0-dev.569 | 2022-06-03 09:50:01 -0700
+
+  * Management framework: bump zeek-client to pull in rendering tweaks (Christian Kreibich, Corelight)
+
+  * Management framework: bump external cluster testsuite (Christian Kreibich, Corelight)
+
+  * Mark lookup_asn() BIF as deprecated in v6.1 (Phil Rzewski)
+
+  * Define geo_autonomous_system record type (Phil Rzewski)
+
+  * Add lookup_autonomous_system() BIF that returns AS number and org (Phil Rzewski)
+
 5.0.0-dev.559 | 2022-06-02 16:58:58 -0700
 
   * Mark lookup_asn() BIF as deprecated in v6.1 (Phil Rzewski)
