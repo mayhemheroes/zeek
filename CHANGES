@@ -1,3 +1,44 @@
+5.1.0-dev.30 | 2022-06-14 12:02:46 -0700
+
+  * Management framework: bump external cluster testsuite (Christian Kreibich, Corelight)
+
+  * Management framework: switch default network visibilities (Christian Kreibich, Corelight)
+
+5.1.0-dev.27 | 2022-06-14 11:30:28 -0700
+
+  * chore: Set permissions for GitHub actions (naveen)
+
+     Restrict the GitHub token permissions only to the required ones; this way, even if the attackers will succeed in compromising your workflow, they won’t be able to do much.
+
+    - Included permissions for the action. https://github.com/ossf/scorecard/blob/main/docs/checks.md#token-permissions
+
+    https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+
+    https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+
+    [Keeping your GitHub Actions and workflows secure Part 1: Preventing pwn requests](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/)
+
+    Signed-off-by: naveen <172697+naveensrinivasan@users.noreply.github.com>
+
+5.1.0-dev.25 | 2022-06-14 10:07:32 -0700
+
+  * chore: Included githubactions in the dependabot config (naveen)
+
+    This should help with keeping the GitHub actions updated on new releases. This will also help with keeping it secure.
+
+    Dependabot helps in keeping the supply chain secure https://docs.github.com/en/code-security/dependabot
+
+    GitHub actions up to date https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot
+
+    https://github.com/ossf/scorecard/blob/main/docs/checks.md#dependency-update-tool
+    Signed-off-by: naveen <172697+naveensrinivasan@users.noreply.github.com>
+
+  * Sort package names in Dockerfiles (Tim Wojtulewicz, Corelight)
+
+  * Dockerfile changes for consistency with Broker files (Tim Wojtulewicz, Corelight)
+
+  * Make some of the CI Dockerfiles more consistent (Tim Wojtulewicz, Corelight)
+
 5.1.0-dev.16 | 2022-06-08 13:42:41 -0700
 
   * Management framework: port auto-assignment (Christian Kreibich, Corelight)
