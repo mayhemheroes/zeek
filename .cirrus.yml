@@ -54,7 +54,7 @@ sanitizers_resource_template: &SANITIZERS_RESOURCE_TEMPLATE
 
 ci_template: &CI_TEMPLATE
   only_if: >
-    $CIRRUS_PR != '' ||
+    ( $CIRRUS_PR != '' && $CIRRUS_BRANCH !=~ 'dependabot/.*' ) ||
     ( $CIRRUS_REPO_NAME == 'zeek' &&
       (
       $CIRRUS_BRANCH == 'master' ||
@@ -206,6 +206,13 @@ opensuse_leap_15_3_task:
   container:
     # Opensuse Leap 15.3 EOL: TBD
     dockerfile: ci/opensuse-leap-15.3/Dockerfile
+    << : *RESOURCES_TEMPLATE
+  << : *CI_TEMPLATE
+
+ubuntu22_task:
+  container:
+    # Ubuntu 22.04 EOL: April 2027
+    dockerfile: ci/ubuntu-22.04/Dockerfile
     << : *RESOURCES_TEMPLATE
   << : *CI_TEMPLATE
 
